@@ -25,6 +25,33 @@ struct ContentView: View {
                     .scale(1.35)
                     .foregroundColor(.white)
                 
+                VStack {
+                    Text("Login")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding()
+                    TextField("Username", text: $username)
+                        .padding()
+                        .frame(width: 300, height: 50)
+                        .background(Color.black.opacity(0.05))
+                        .cornerRadius(10)
+                        .border(.red, width: CGFloat(wrongUsername))
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .frame(width: 300, height: 50)
+                        .background(Color.black.opacity(0.05))
+                        .cornerRadius(10)
+                        .border(.red, width: CGFloat(wrongPassword))
+                    
+//                    Button("Login") {
+//                        
+//                    }
+//                    .foregroundColor(.white)
+//                    frame(width: 300, height: 50)
+//                        .background()
+                    
+                }
+                
             }
         }
     }
